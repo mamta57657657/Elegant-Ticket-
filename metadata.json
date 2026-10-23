@@ -1,0 +1,8 @@
+{
+  "name": "Remix Open Tickets - Premium Ticket Site Theme Redesign",
+  "description": "A premium, elegant visual refresh for Open Tickets (opentickets.co.za) featuring refined typography, seamless isotope event filtering, interactive seating maps, rich event details, FAQs, and search.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

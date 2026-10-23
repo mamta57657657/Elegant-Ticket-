@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --ot-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --ot-font-display: 'Space Grotesk', system-ui, sans-serif;
+
+    /* Theme colors - easily re-themanble by devs */
+    --ot-primary: #ea580c; /* vibrant warm orange / amber as in Open Tickets */
+    --ot-primary-hover: #c2410c;
+    --ot-primary-light: #fff7ed;
+    --ot-primary-glow: rgba(234, 88, 12, 0.25);
+
+    --ot-gold: #f59e0b;
+    --ot-gold-dark: #b45309;
+
+    --ot-dark-header: #101622;
+    --ot-dark-sidebar: #0f172a;
+    --ot-dark-footer: #0c121e;
+    --ot-dark-card: #1e293b;
+
+    --ot-surface-light: #ffffff;
+    --ot-surface-subtle: #f8fafc;
+    --ot-border: #e2e8f0;
+    --ot-border-focus: #cbd5e1;
+
+    --ot-text-dark: #0f172a;
+    --ot-text-muted: #64748b;
+    --ot-text-subtle: #94a3b8;
+
+    --ot-radius-card: 0.75rem;
+    --ot-radius-btn: 0.5rem;
+  }
+
+  /* Preset theme classes dynamically switchable */
+  body[data-theme="gold-navy"] {
+    --ot-primary: #d97706;
+    --ot-primary-hover: #b45309;
+    --ot-primary-light: #fffbeb;
+    --ot-primary-glow: rgba(217, 119, 6, 0.25);
+  }
+
+  body[data-theme="boardwalk-blue"] {
+    --ot-primary: #0284c7;
+    --ot-primary-hover: #0369a1;
+    --ot-primary-light: #f0f9ff;
+    --ot-primary-glow: rgba(2, 132, 199, 0.25);
+  }
+
+  body[data-theme="emerald-stage"] {
+    --ot-primary: #059669;
+    --ot-primary-hover: #047857;
+    --ot-primary-light: #ecfdf5;
+    --ot-primary-glow: rgba(5, 150, 105, 0.25);
+  }
+
+  body {
+    font-family: var(--ot-font-sans);
+    color: var(--ot-text-dark);
+    background-color: #f8fafc;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--ot-font-display);
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth isotope transitions */
+.isotope-grid {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ticket-notch {
+  position: relative;
+}
+.ticket-notch::before,
+.ticket-notch::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #f8fafc;
+  border-radius: 50%;
+}
+.ticket-notch::before {
+  left: -8px;
+}
+.ticket-notch::after {
+  right: -8px;
+}
