@@ -315,7 +315,9 @@ export const EventDetailPage: React.FC<EventDetailPageProps> = ({
                       {event.organizer.name}
                     </h2>
                     {event.organizer.verified && (
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500" title="Verified Organizer" />
+                      <span title="Verified Organizer" className="inline-flex items-center">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                      </span>
                     )}
                   </div>
                   <span className="text-xs text-slate-500">Official Open Tickets Verified Organizer</span>
